@@ -1,1 +1,9 @@
-pass
+def antiderivative(array):
+    new_arr = [int(coef / (len(array) - i)) for i, coef in enumerate(array)]
+    any_number = -2
+    new_arr.append(any_number)
+    return new_arr
+
+
+arr = [4, 6, 0, 1]
+print(antiderivative(arr))
