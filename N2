@@ -8,7 +8,7 @@ dict_string = collections.defaultdict(int)
 for char in string:
     dict_string[char] += 1
 
-temp_list = [char + str(count) for char, count in dict_string.iteritems()]
+temp_list = [char + str(count) for char, count in dict_string.items()]
 
 char_count = ''
 for i in temp_list:
