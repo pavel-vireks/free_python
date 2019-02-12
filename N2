@@ -1,17 +1,19 @@
-# Посчитать кол-во символов в строке. Ввод: aaabbcaad
-# Вывод: a3b2c1a2d1
+# Написать программу, которая сжимает группу повторяющихся символов, 
+# стоящих друг с другом и заменяет их на количество повторений.
+# Например, ввод: aaabbcaa, вывод: а3b2c1a2
 
-import collections
 string = input('Enter string:\n')
 
-dict_string = collections.defaultdict(int)
-for char in string:
-    dict_string[char] += 1
+root_char = string[0]
+count_char = 1
+result_string = ''
 
-temp_list = [char + str(count) for char, count in dict_string.items()]
+for char in string[1:]:
+    if char == root_char:
+        count_char += 1
+    else:
+        result_string += root_char + str(count_char)
+        root_char = char
+        count_char = 1
 
-char_count = ''
-for i in temp_list:
-    char_count += i
-
-print(char_count)
+print('{}{}{}'.format(result_string, root_char, str(count_char)))
