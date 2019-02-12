@@ -1,0 +1,17 @@
+# Посчитать кол-во символов в строке. Ввод: aaabbcaad
+# Вывод: a3b2c1a2d1
+
+import collections
+string = input('Enter string:\n')
+
+dict_string = collections.defaultdict(int)
+for char in string:
+    dict_string[char] += 1
+
+temp_list = [char + str(count) for char, count in dict_string.iteritems()]
+
+char_count = ''
+for i in temp_list:
+    char_count += i
+
+print(char_count)
