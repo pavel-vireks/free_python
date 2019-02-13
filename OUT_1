@@ -8,3 +8,17 @@ a = int(input('Enter number "a"\n'))
 b = int(input('Enter number "b"\n'))
 
 print(list_dig[b] * a)
+
+
+"""
+Написать программу перевода суммы из BYN в USD или EUR по желанию пользователя. 
+Обменный курс и начальная сумма вводятся пользователем с клавиатуры.
+"""
+
+currency = input('Enter currency: \n')
+enter_course = float(input('Enter course: \n'))
+initial_amount = float(input('Enter initial amount: \n'))
+
+excange = initial_amount / enter_course
+
+print('BYN: {} = {} {}'.format(initial_amount, excange, currency))
