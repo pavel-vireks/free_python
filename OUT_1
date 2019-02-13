@@ -1,0 +1,6 @@
+list_dig = [int(input('Enter number {}:\n'.format(ind))) for ind in range(1, 6)]
+
+a = int(input('Enter number "a"\n'))
+b = int(input('Enter number "b"\n'))
+
+print(list_dig[b] * a)
